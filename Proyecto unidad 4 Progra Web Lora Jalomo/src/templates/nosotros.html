@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- fuentes google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Linkear normalize y estilos css -->
+    <link rel="stylesheet" href="../static/css/nosotros.css">
+    <link rel="stylesheet" href="../static/css/calculadora.css">
+</head>
+<body>
+ 
+      <!-- Header -->
+   <div class="header">
+    <a href="/home">
+        <img src="../static/img/JdevStore.png" class="logo" alt="Logo" />
+    </a>
+  <div class="header__menu">
+    <nav class="header__nav">
+      <a href="/home">Inicio</a>
+      <a href="#catalogo">Catalogo de productos</a>
+      {% if 'user_type' in session and session['user_type'] == 1 %}
+      <a class="navegacion__enlace" href="/admin" id="administrar">
+          Administrar
+      </a>
+    {% endif %}
+      <a href="/nosotros">Nosotros</a>
+      <a href="#" id="abrirCalculadora">Calculadora</a>
+      <a id="logout">Salir</a>
+    </nav>
+  </div>
+</div>
+ 
+
+    <main class="contenedor">
+        <h1>Sobre nosotros</h1>
+
+        <div class="nosotros">
+            <div class="nosotros__contenido">
+                <h1 class="nosotros__titulo">JalomoDev Store</h1>
+                <p>
+                    En JalomoDev, no solo creamos código y diseños; damos vida a tus ideas. Estamos profundamente comprometidos con la excelencia en el desarrollo web, ecommerce y diseño, siempre buscando superar las expectativas y ofrecer soluciones que impulsen el éxito de nuestros clientes.
+                </p>
+                <p>
+                    Contamos con servicios como Desarrollo Web, en donde creamos la pagina web a tu gusto, para que logres crecer tu negocio y atrayendo nuevos clientes 
+                    potenciales, o simplemente potenciar tu marca personal, además tambien contamos con desarrollo de aplicaciones móviles, y con diseño web en donde
+                    nos encargaremos de realizar la maquetacion de tu sitio web. 
+                </p>
+            </div>
+            <img class="nosotros__imagen" src="../static/img/nosotros.jpg" alt="imagen nosotros">
+        </div>
+    </main>
+
+    <section class="contenedor comprar">
+        <h2 class="comprar__titulo">¿Porqué comprar con nosotros?</h2>
+        <div class="bloques">
+            <div class="bloque">
+                <img class="bloque__imagen" src="../static/img/icono_1.png" alt="por que comprar">
+                <h3 class="bloque__titulo">El mejor precio</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id adipisci ipsum vero. Asperiores accusantium quo officiis excepturi, ipsum quis adipisci aliquam minus optio delectus repudiandae qui possimus magnam quod rerum?</p>
+            </div> <!-- bloque -->
+            <div class="bloque">
+                <img class="bloque__imagen" src="../static/img/icono_2.png" alt="por que comprar">
+                <h3 class="bloque__titulo">Para devs</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id adipisci ipsum vero. Asperiores accusantium quo officiis excepturi, ipsum quis adipisci aliquam minus optio delectus repudiandae qui possimus magnam quod rerum?</p>
+            </div> <!-- bloque -->
+            <div class="bloque">
+                <img class="bloque__imagen" src="../static/img/icono_3.png" alt="por que comprar">
+                <h3 class="bloque__titulo">Envio gratis</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id adipisci ipsum vero. Asperiores accusantium quo officiis excepturi, ipsum quis adipisci aliquam minus optio delectus repudiandae qui possimus magnam quod rerum?</p>
+            </div> <!-- bloque -->
+            <div class="bloque">
+                <img class="bloque__imagen" src="../static/img/icono_4.png" alt="por que comprar">
+                <h3 class="bloque__titulo">La mejor calidad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id adipisci ipsum vero. Asperiores accusantium quo officiis excepturi, ipsum quis adipisci aliquam minus optio delectus repudiandae qui possimus magnam quod rerum?</p>
+            </div> <!-- bloque -->
+        </div> <!-- bloques-->
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Navegación</h5>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>Contacto</h5>
+              <ul class="list-unstyled">
+                <li><a href="mailto:info@jalomodevstore.com">info@jalomodevstore.com</a></li>
+                <li>+52 686 425 98 79</li>
+                <li>Mexicali, Baja California. Mexico</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>Síguenos</h5>
+              <ul class="list-unstyled social-icons">
+                <li><a href="#"><img src="../static/img/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="../static/img/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="../static/img/linkedin-icon.png" alt="LinkedIn"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="footer__copy">&copy; 2024 Jalomo Dev Store. Todos los derechos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+    <div class="calculator" id="calculadoraContainer" style="display: none;">
+        <button id="cerrarCalculadora">-</button>
+        <div class="display">0</div>
+        <div class="buttons">
+          <!-- Botones de la calculadora -->
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="operador">/</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="operador">*</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button class="operador">-</button>
+          <button>0</button>
+          <button class="operador">+</button>
+          <button class="operador">C</button>
+          <button class="operador yellow">=</button>
+    
+        </div>
+    
+  
+        <script src="{{ url_for('static', filename='js/calculadora.js') }}"></script>
+</body>
+</html>

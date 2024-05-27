@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../static/css/normalize.css" />
+    <link rel="stylesheet" href="../../static/css/login.css" />
+  </head>
+  <body>
+    <form action="/login" class="form" method="POST">
+      <img src="../../static/img/JdevStore.png" alt="">
+      <h1>Iniciar Sesión</h1>
+      &nbsp;
+      &nbsp;
+       
+
+      <label class="usuario" for="">Usuario</label>
+      <input
+        type="text"
+        placeholder="Escriba su usuario"
+        id="usuario"
+        name="username"
+      />
+
+      <label class="contrasena" for="">Contraseña</label>
+      <input
+        type="text"
+        placeholder="Escriba su contraseña"
+        id="clave"
+        name="password"
+      />
+
+      <input class="boton" type="submit" value="Entrar" id="iniciar" />
+
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="error-message">
+          <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    {% endwith %}
+    
+    </form>
+
+     <!-- <script src="{{ url_for('static', filename='js/scriptLogin.js') }}"></script>  -->
+  </body>
+</html>
